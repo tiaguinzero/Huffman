@@ -30,6 +30,9 @@ public class ReadBytes {
             long fileSize = file.length();
             for (int i = 0; i < fileSize; i++) {
                 byte b = file.readByte();
+                
+                System.out.println(b);
+
                 try {
                     this.bytes.guardeNoFinal(b); 
                 } catch (Exception e) {

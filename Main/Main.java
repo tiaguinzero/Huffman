@@ -39,10 +39,5 @@ public class Main {
 
         System.out.println(huffmanTree.getHuffmanCodes());
 
-
-
-
-
-
     }
 }

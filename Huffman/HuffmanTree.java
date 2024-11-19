@@ -2,6 +2,7 @@ package Huffman;
 
 import java.util.BitSet;
 
+
 import Estruturas.FilaPrioridade;
 import java.util.HashMap;
 import Estruturas.ListaEncadeadaSimplesDesordenada;
@@ -72,7 +73,4 @@ public class HuffmanTree {
     public HashMap<Byte, Integer> getHuffmanCodes() {
         return huffmanCodes;
     }
-
-    
-    
 }
