@@ -1,13 +1,18 @@
 package Main;
 
-import Huffman.HuffmanTree;
-
 import java.io.RandomAccessFile;
+import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            RandomAccessFile inputFile = new RandomAccessFile("entrada.txt", "r");
+            File file = new File("entrada.txt");
+            if (!file.exists()) {
+                System.out.println("Arquivo não encontrado. Criando um novo arquivo chamado 'entrada.txt'.");
+                file.createNewFile(); // Cria um arquivo vazio
+            }
+
+            RandomAccessFile inputFile = new RandomAccessFile(file, "r");
             StringBuilder text = new StringBuilder();
             String line;
             while ((line = inputFile.readLine()) != null) {
@@ -15,9 +20,8 @@ public class Main {
             }
             inputFile.close();
 
-            HuffmanTree tree = new HuffmanTree(text.toString());
-            System.out.println("Árvore de Huffman construída com sucesso!");
-            // Testes adicionais aqui.
+            System.out.println("Conteúdo do arquivo:");
+            System.out.println(text);
 
         } catch (Exception e) {
             e.printStackTrace();

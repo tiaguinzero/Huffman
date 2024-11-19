@@ -92,6 +92,24 @@ public class ListaEncadeadaSimplesOrdenada<X extends Comparable<X>> implements C
 
     }
 
+    public int getTamanho() {
+        int size = 0;
+        No atual = primeiro;
+        while (atual != null) {
+            size++;
+            atual = atual.getProx();
+        }
+        return size;
+    }
+    
+    public X getPrimeiro() throws Exception {
+        if (primeiro == null) {
+            throw new Exception("Lista vazia");
+        }
+        return primeiro.getInfo();
+    }
+    
+
     public void guarde(X i) throws Exception {
         if (i == null) throw new Exception("Informação ausente");
 
