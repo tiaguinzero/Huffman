@@ -24,7 +24,7 @@ public class HuffmanTree {
             queue.guarde(node); // Adiciona nó à fila de prioridade
         }
         
-        // Construa a árvore de Huffman
+        // Construa a árvore de Huf fman
         huffmanCompressor();
     }
 
