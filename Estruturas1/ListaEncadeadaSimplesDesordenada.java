@@ -1,6 +1,4 @@
-package Estruturas;
-
-import java.util.List;
+package Estruturas1;
 
 public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 {

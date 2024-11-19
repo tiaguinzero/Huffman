@@ -1,4 +1,4 @@
-package Estruturas;
+package Estruturas1;
 
 public class FilaPrioridade<X extends Comparable<X>> {
     private ListaEncadeadaSimplesDesordenada<X> lista;

@@ -41,6 +41,6 @@ public class HuffmanNode implements Comparable<HuffmanNode> {
 
     @Override
     public String toString() {
-        return "Char: " + (this.value == 0 ? "INTERNAL" : this.value) + ", Freq: " + this.frequency;
+        return "Char: " + this.value + ", Freq: " + this.frequency;
     }
 }
