@@ -187,6 +187,8 @@ public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 		if (posicao==0)
 		{
 			this.primeiro = new No (i,this.primeiro);
+
+
 			return;
 		}
 		
@@ -200,6 +202,7 @@ public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 		}
 		
 		atual.setProx (new No (i,atual.getProx()));
+
 	}
 	
 
