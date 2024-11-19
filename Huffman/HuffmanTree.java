@@ -2,64 +2,77 @@ package Huffman;
 
 import java.util.BitSet;
 
-import Estruturas.HashMap;
+import Estruturas.FilaPrioridade;
+import java.util.HashMap;
 import Estruturas.ListaEncadeadaSimplesDesordenada;
 
 public class HuffmanTree {
     private HuffmanNode root;
-    private HashMap<Byte, ListaEncadeadaSimplesDesordenada<Byte>> huffmanCodes;
-    private queue 
-
-    // public HuffmanTree(ListaEncadeadaSimplesDesordenada<Byte> bytes){
-
-
-    // }
+    private HashMap<Byte, Integer> huffmanCodes;
+    private FilaPrioridade<HuffmanNode> queue;
     
 
+    public HuffmanTree(HashMap<Byte, Integer> frequencyMap) {
+        this.queue = new FilaPrioridade<>();
+        this.huffmanCodes = new HashMap<>();
+    
+        // Criação dos nós e inserção na fila de prioridade
+        for (HashMap.Entry<Byte, Integer> entry : frequencyMap.entrySet()) {
+            byte value = entry.getKey();
+            int frequency = entry.getValue();
+            HuffmanNode node = new HuffmanNode(value, frequency);
+            queue.guarde(node); // Adiciona nó à fila de prioridade
+        }
+        
+        // Construa a árvore de Huffman
+        huffmanCompressor();
+    }
 
-    // public HuffmanTree(String text) throws Exception {
-    //     ListaEncadeadaSimplesDesordenada<HuffmanNode> queue = new ListaEncadeadaSimplesDesordenada<>();
+    public HuffmanNode getRoot() {
+        return this.root;
+    }
+    
 
-    //     // Contar frequências
-    //     int[] frequencies = new int[256];
-    //     for (char c : text.toCharArray()) {
-    //         frequencies[c]++;
-    //     }
+    private void huffmanCompressor() {
+        while (queue.getTamanho() > 1) {
+            HuffmanNode left = queue.desenfilere();
+            HuffmanNode right = queue.desenfilere();
+            HuffmanNode parent = new HuffmanNode(left.getFrequency() + right.getFrequency(), left, right);
+            queue.guarde(parent);
+        }
+        this.root = queue.desenfilere();
+    }
 
-    //     // Criar nós iniciais
-    //     for (int i = 0; i < frequencies.length; i++) {
-    //         if (frequencies[i] > 0) {
-    //             queue.guarde(new HuffmanNode((char) i, frequencies[i]));
-    //         }
-    //     }
+    public void generateCodes() {
+        if (root != null) {
+            generateCodes(root, 0, 0); // Inicia o processo com código 0 e profundidade 0
+        }
+    }
+    
+    private void generateCodes(HuffmanNode node, int code, int depth) {
+        // Caso base: nó folha
+        if (node.isLeaf()) {
+            huffmanCodes.put(node.getValue(), code); // Associa o código inteiro ao byte
+            System.out.println("Byte: " + node.getValue() + ", Código: " + Integer.toBinaryString(code) + ", Profundidade: " + depth);
+            return;
+        }
+    
+        // Percorre à esquerda (adiciona bit 0)
+        if (node.getLeft() != null) {
+            generateCodes(node.getLeft(), code << 1, depth + 1); // Desloca o código à esquerda
+        }
+    
+        // Percorre à direita (adiciona bit 1)
+        if (node.getRight() != null) {
+            generateCodes(node.getRight(), (code << 1) | 1, depth + 1); // Desloca à esquerda e adiciona 1 no último bit
+        }
+    }
+    
 
-    //     // Construir árvore
-    //     while (queue.getTamanho() > 1) {
-    //         HuffmanNode left = queue.getPrimeiro();
-    //         queue.remova(left);
+    public HashMap<Byte, Integer> getHuffmanCodes() {
+        return huffmanCodes;
+    }
 
-    //         HuffmanNode right = queue.getPrimeiro();
-    //         queue.remova(right);
-
-    //         HuffmanNode parent = new HuffmanNode(left.getFrequency() + right.getFrequency(), left, right);
-    //         queue.guarde(parent);
-    //     }
-
-    //     this.root = queue.getPrimeiro();
-    //     this.huffmanCodes = new HashMap<>(256);
-    //     generateCodes(this.root, "");
-    // }
-
-    // private void generateCodes(HuffmanNode node, String code) throws Exception {
-    //     if (node.isLeaf()) {
-    //         huffmanCodes.put(node.getCharacter(), code);
-    //         return;
-    //     }
-    //     if (node.getLeft() != null) generateCodes(node.getLeft(), code + "0");
-    //     if (node.getRight() != null) generateCodes(node.getRight(), code + "1");
-    // }
-
-    // public HashMap<Character, String> getHuffmanCodes() {
-    //     return this.huffmanCodes;
-    // }
+    
+    
 }

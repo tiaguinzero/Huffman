@@ -182,11 +182,11 @@ public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 		if (posicao<0) throw new Exception ("Posicao invalida");
 		if (i==null) throw new Exception ("Falta o que inserir");
 		
-		X inf = new Clonador<X>().clone(i);
+		// X inf = new Clonador<X>().clone(i);
 		
 		if (posicao==0)
 		{
-			this.primeiro = new No (inf,this.primeiro);
+			this.primeiro = new No (i,this.primeiro);
 			return;
 		}
 		
@@ -199,7 +199,7 @@ public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 			posAtual++;
 		}
 		
-		atual.setProx (new No (inf,atual.getProx()));
+		atual.setProx (new No (i,atual.getProx()));
 	}
 	
 

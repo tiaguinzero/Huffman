@@ -1,9 +1,7 @@
 package Main;
 import Estruturas.ListaEncadeadaSimplesDesordenada;
 import Estruturas.ReadBytes;
-import Huffman.HuffmanTree;
-
-import java.util.HashMap;
+import Estruturas.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,11 +11,12 @@ public class Main {
         reader.readBytes();
         ListaEncadeadaSimplesDesordenada<Byte> bytes = reader.getBytes();
 
+        // Construir a tabela de frequência
         HashMap<Byte, Integer> frequencyMap = new HashMap<>();
         for(int i = 0; i<bytes.getTamanho(); i++){
             try{
                 byte b = bytes.get(i);
-            if(frequencyMap.containsKey(b)){
+            if(frequencyMap.contemKey(b)){
                 frequencyMap.put(b, frequencyMap.get(b) + 1);
             } else {
                 frequencyMap.put(b, 1);
@@ -30,19 +29,6 @@ public class Main {
             
         }
 
-
         System.out.println(frequencyMap);
-
-        HuffmanTree huffmanTree = new HuffmanTree(frequencyMap);
-
-        huffmanTree.generateCodes();
-
-        System.out.println(huffmanTree.getHuffmanCodes());
-
-
-
-
-
-
     }
 }
