@@ -2,15 +2,15 @@ package Estruturas;
 
 public class HashMap<K, V> {
     private static final int DEFAULT_CAPACITY = 16; // Tamanho inicial da tabela
-    private ListaEncadeadaSimplesDesordenada<Entry<K, V>>[] table;
+    private ListaEncadeadaSimplesDesordenada<ListaEncadeadaSimplesDesordenada<Pair<K, V>>> table;
+    private int capacity;
     private int size;
 
-    
-    class Entry<K, V> {
+    class Pair<K, V> {
         K key;
         V value;
 
-        Entry(K key, V value) {
+        Pair(K key, V value) {
             this.key = key;
             this.value = value;
         }
@@ -19,13 +19,18 @@ public class HashMap<K, V> {
         public boolean equals(Object obj) {
             if (this == obj) return true;
             if (obj == null || getClass() != obj.getClass()) return false;
-            Entry<?, ?> entry = (Entry<?, ?>) obj;
-            return key.equals(entry.key); // Comparação apenas pela chave
+            Pair<?, ?> pair = (Pair<?, ?>) obj;
+            return key.equals(pair.key); // Comparação apenas pela chave
         }
 
         @Override
         public int hashCode() {
             return key.hashCode();
+        }
+
+        @Override
+        public String toString() {
+            return key + "=" + value;
         }
     }
 
@@ -33,41 +38,44 @@ public class HashMap<K, V> {
         this(DEFAULT_CAPACITY);
     }
 
-    @SuppressWarnings("unchecked") // Necessário para criar um array de genéricos
     public HashMap(int capacity) {
-        table = new ListaEncadeadaSimplesDesordenada[capacity];
-        size = 0;
-        for(int i = 0; i < capacity; i++){
-            table[i] = new ListaEncadeadaSimplesDesordenada<>();
+        this.capacity = capacity;
+        this.size = 0;
+        this.table = new ListaEncadeadaSimplesDesordenada<>();
+        try {
+            for (int i = 0; i < capacity; i++) {
+                table.guardeNoInicio(new ListaEncadeadaSimplesDesordenada<>());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     private int hash(K key) {
-        return Math.abs(key.hashCode()) % table.length; // Função de hash simples
+        return Math.abs(key.hashCode()) % capacity; // Função de hash simples
+    }
+
+    private ListaEncadeadaSimplesDesordenada<Pair<K, V>> getBucket(int index) throws Exception {
+        return table.get(index);
     }
 
     public void put(K key, V value) {
         int index = hash(key);
-        ListaEncadeadaSimplesDesordenada<Entry<K, V>> lista = table[index];
-
-        // Verifica se a chave já existe na lista
-        boolean chaveExiste = false;
-        for(int i = 0; i < lista.getTamanho(); i++){
-            try {
-                if (lista.get(i).key.equals(key)) {
-                    lista.remova(i);
-                    chaveExiste = true;
-                    break;
-                }
-            } catch (Exception e) {
-                //Ignora exceção, pois a lista pode estar vazia
-            }
-        }
-
-
         try {
-            lista.guardeNoInicio(new Entry<>(key, value));
-            if(!chaveExiste) size++;
+            ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(index);
+
+            // Verifica se a chave já existe na lista
+            for (int i = 0; i < bucket.getTamanho(); i++) {
+                Pair<K, V> pair = bucket.get(i);
+                if (pair.key.equals(key)) {
+                    pair.value = value; // Atualiza o valor
+                    return;
+                }
+            }
+
+            // Adiciona um novo par
+            bucket.guardeNoInicio(new Pair<>(key, value));
+            size++;
         } catch (Exception e) {
             e.printStackTrace(); // Lidar com possíveis exceções
         }
@@ -75,53 +83,73 @@ public class HashMap<K, V> {
 
     public V get(K key) {
         int index = hash(key);
-        ListaEncadeadaSimplesDesordenada<Entry<K, V>> lista = table[index];
+        try {
+            ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(index);
 
-        for (int i = 0; i < lista.getTamanho(); i++) {
-            try {
-                if (lista.get(i).key.equals(key)) {
-                    return lista.get(i).value;
+            for (int i = 0; i < bucket.getTamanho(); i++) {
+                Pair<K, V> pair = bucket.get(i);
+                if (pair.key.equals(key)) {
+                    return pair.value;
                 }
-            } catch (Exception e) {
-                // Ignora exceção se a lista estiver vazia.
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return null; // Chave não encontrada
     }
 
-    public int size() {
-        return size;
-    }
-    
     public void remove(K key) {
         int index = hash(key);
-        ListaEncadeadaSimplesDesordenada<Entry<K, V>> lista = table[index];
+        try {
+            ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(index);
 
-        for (int i = 0; i < lista.getTamanho(); i++) {
-            try {
-                if (lista.get(i).key.equals(key)) {
-                    lista.remova(i);
+            for (int i = 0; i < bucket.getTamanho(); i++) {
+                Pair<K, V> pair = bucket.get(i);
+                if (pair.key.equals(key)) {
+                    bucket.remova(i);
                     size--;
                     return;
                 }
-            } catch (Exception e) {
-                // Ignora exceção se a lista estiver vazia.
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+    }
+
+    public boolean contemKey(K key) {
+        int index = hash(key);
+        try {
+            ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(index);
+
+            for (int i = 0; i < bucket.getTamanho(); i++) {
+                Pair<K, V> pair = bucket.get(i);
+                if (pair.key.equals(key)) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public int size() {
+        return size;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        for (ListaEncadeadaSimplesDesordenada<Entry<K, V>> lista : table) {
-            for (int i = 0; i < lista.getTamanho(); i++) {
-                try {
-                    sb.append(lista.get(i).key).append("=").append(lista.get(i).value).append(", ");
-                } catch (Exception e) {
-                    // Ignora exceção se a lista estiver vazia.
+        try {
+            for (int i = 0; i < table.getTamanho(); i++) {
+                ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(i);
+                for (int j = 0; j < bucket.getTamanho(); j++) {
+                    sb.append(bucket.get(j)).append(", ");
                 }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         sb.append("}");
         return sb.toString();

@@ -10,10 +10,10 @@ public class HuffmanTree {
     private HashMap<Byte, ListaEncadeadaSimplesDesordenada<Byte>> huffmanCodes;
     private queue 
 
-    public HuffmanTree(ListaEncadeadaSimplesDesordenada<Byte> bytes){
+    // public HuffmanTree(ListaEncadeadaSimplesDesordenada<Byte> bytes){
 
 
-    }
+    // }
     
 
 

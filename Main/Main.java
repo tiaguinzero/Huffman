@@ -1,28 +1,30 @@
 package Main;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import Estruturas.ListaEncadeadaSimplesDesordenada;
+import Estruturas.ReadBytes;
+import Estruturas.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        // Caminho do arquivo para testes
-        String filePath = "IMG_4657.PNG";
+        String filePath = "projeto3_topicosIA.pdf";
 
-        try {
-            // Usando FileInputStream para ler todo o conteúdo do arquivo em bytes
-            File file = new File(filePath);
-            byte[] fileBytes = new byte[(int) file.length()];
+        ReadBytes reader = new ReadBytes(filePath);
+        reader.readBytes();
+        ListaEncadeadaSimplesDesordenada<Byte> bytes = reader.getBytes();
 
-            FileInputStream fileInputStream = new FileInputStream(file);
-            fileInputStream.read(fileBytes);
-            fileInputStream.close();
+        // Construir a tabela de frequência
+        HashMap<Byte, Integer> frequencyMap = new HashMap<>();
 
-            System.out.println(fileBytes.length);
-        } catch (IOException e) {
-            System.out.println("Erro ao abrir ou ler o arquivo");
-        } finally {
-            // Fechar a classe ReadFile (caso você a utilize)
-            System.out.println("Fechando o arquivo");
+        for(int i = 0; i < bytes.getTamanho(); i++){
+            try {
+                Byte b = bytes.get(i);
+                if(frequencyMap.contemKey(b)){
+                    frequencyMap.put(b, frequencyMap.get(b) + 1);
+                } else {
+                    frequencyMap.put(b, 1);
+                }
+            } catch (Exception e) {
+                
+            }
         }
     }
 }
