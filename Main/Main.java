@@ -37,12 +37,8 @@ public class Main {
 
         huffmanTree.generateCodes();
 
-        System.out.println(huffmanTree.getHuffmanCodes());
+        System.out.println("olhe ai os codigos: " + huffmanTree.getHuffmanCodes());
 
-
-
-
-
-
+        huffmanTree.makeNewFile("saida.txt", huffmanTree.getHuffmanCodes(),bytes,huffmanTree.getRoot());;
     }
 }

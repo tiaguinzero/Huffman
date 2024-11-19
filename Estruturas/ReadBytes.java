@@ -2,7 +2,6 @@ package Estruturas;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import Estruturas.HashMap;
 
 public class ReadBytes {
     private String filePath;
