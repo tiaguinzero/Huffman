@@ -32,6 +32,7 @@ public class ReadBytes {
                 byte b = file.readByte();
                 
                 System.out.println(b);
+
                 try {
                     this.bytes.guardeNoFinal(b); 
                 } catch (Exception e) {

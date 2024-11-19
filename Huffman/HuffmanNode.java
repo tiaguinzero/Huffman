@@ -20,10 +20,10 @@ public class HuffmanNode implements Comparable<HuffmanNode> {
         this.right = right;
     }
 
-    public byte getValue() { return this.value; }
-    public int getFrequency() { return this.frequency; }
-    public HuffmanNode getLeft() { return this.left; }
-    public HuffmanNode getRight() { return this.right; }
+    public byte getValue() { return value; }
+    public int getFrequency() { return frequency; }
+    public HuffmanNode getLeft() { return left; }
+    public HuffmanNode getRight() { return right; }
 
     public boolean isLeaf() {
         return this.left == null && this.right == null;
