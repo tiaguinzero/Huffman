@@ -39,6 +39,6 @@ public class Main {
 
         System.out.println("olhe ai os codigos: " + huffmanTree.getHuffmanCodes());
 
-        huffmanTree.makeNewFile("saida.txt", huffmanTree.getHuffmanCodes(),bytes,huffmanTree.getRoot());;
+        huffmanTree.makeNewFile("saida.bin", huffmanTree.getHuffmanCodes(),bytes,huffmanTree.getRoot());;
     }
 }

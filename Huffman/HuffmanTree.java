@@ -4,7 +4,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.BitSet;
 
-
 import Estruturas.FilaPrioridade;
 import java.util.HashMap;
 import java.util.Map;
@@ -80,59 +79,67 @@ public class HuffmanTree {
 
     public void makeNewFile(String filePath, Map<Byte, Integer> huffmanCodes, ListaEncadeadaSimplesDesordenada<Byte> bytes, HuffmanNode root) {
         try (FileOutputStream file = new FileOutputStream(filePath)) {
-            // 1. Serialize the Huffman tree
+            // Serializa a árvore
             serializeTree(file, root);
-
-            // 2. Write the encoded data (same as before)
+            System.out.println("Árvore serializada com sucesso.");
+    
             byte currentByte = 0;
             int bitsInCurrentByte = 0;
+    
             for (int i = 0; i < bytes.getTamanho(); i++) {
                 try {
                     byte b = bytes.get(i);
                     int code = huffmanCodes.get(b);
-                    String codeString = Integer.toBinaryString(code);
-                    for (int j = codeString.length() - 1; j >= 0; j--) {
-                        char bit = codeString.charAt(j);
-                        currentByte = (byte) ((currentByte << 1) | (bit - '0'));
+                    int codeLength = Integer.SIZE - Integer.numberOfLeadingZeros(code);
+        
+                    System.out.println("Codificando byte: " + b + " com código: " + Integer.toBinaryString(code));
+        
+                    for (int j = codeLength - 1; j >= 0; j--) {
+                        int bit = (code >> j) & 1;
+                        currentByte = (byte) ((currentByte << 1) | bit);
                         bitsInCurrentByte++;
+        
                         if (bitsInCurrentByte == 8) {
                             file.write(currentByte);
+                            System.out.println("Escrevendo byte completo: " + Integer.toBinaryString(currentByte & 0xFF));
                             currentByte = 0;
                             bitsInCurrentByte = 0;
                         }
                     }
+                    
                 } catch (Exception e) {
-                    //Handle Exception Appropriately.  Don't just swallow it.
-                    e.printStackTrace(); //At a minimum, log the error.
+                    // TODO: handle exception
                 }
+                
             }
-
-            // Handle any remaining bits
+    
             if (bitsInCurrentByte > 0) {
                 currentByte <<= (8 - bitsInCurrentByte);
                 file.write(currentByte);
+                System.out.println("Escrevendo byte final incompleto: " + Integer.toBinaryString(currentByte & 0xFF));
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    
 
     private void serializeTree(FileOutputStream file, HuffmanNode node) throws IOException {
         if (node == null) {
-            file.write(0); //Represents null node
+            file.write(0); // Nó nulo
             return;
         }
-        file.write(1); // Represents a node
-
-        if(node.isLeaf()){
-            file.write(node.getValue());// é uma folha(byte)
-        }else{
-            file.write(0); // é um nó interno
+    
+        file.write(1); // Indica que é um nó válido
+    
+        if (node.isLeaf()) {
+            file.write(1); // Indica que é uma folha
+            file.write(node.getValue()); // Escreve o valor do byte
+        } else {
+            file.write(0); // Indica que é um nó interno
+            serializeTree(file, node.getLeft()); // Serializa subárvore esquerda
+            serializeTree(file, node.getRight()); // Serializa subárvore direita
         }
-
-        serializeTree(file, node.getLeft());
-        serializeTree(file, node.getRight());
     }
 
 }
