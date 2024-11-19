@@ -1,4 +1,4 @@
-package ListaEncadeadaSimplesOrdenada;
+package Estruturas;
 
 // esta classe estava, supostamente, pronta
 
