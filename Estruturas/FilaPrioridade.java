@@ -31,17 +31,13 @@ public class FilaPrioridade<X extends Comparable<X>> {
     
             // se não for nem o menor nem o maior de todos, procurar no meio a posição
             for (int i = 0; i < this.lista.getTamanho(); i++) {
-
                 if (info.compareTo(this.lista.get(i)) <= 0) { // <= is the key change
-
                     this.lista.guardeEm(i, info); // coloca na posição i
                     return;
                 }
             }
-
             this.lista.guardeNoFinal(info);
-
-
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -68,4 +64,4 @@ public class FilaPrioridade<X extends Comparable<X>> {
     }
 
     
-
+}
