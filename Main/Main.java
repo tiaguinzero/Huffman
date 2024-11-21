@@ -33,18 +33,35 @@ public class Main {
             
         }
 
+        System.out.println(frequencyMap);
+        System.out.println(frequencyMap.size());
+
 
         
 
         HuffmanTree huffmanTree = new HuffmanTree(frequencyMap);
 
+
+        huffmanTree.generateCodes();
+        HashMap<Byte, String> huffmanCodes = huffmanTree.getHuffmanCodes();
+        System.out.println(huffmanCodes);
+
+        try {
+            Byte b = listabytes.get(0);
+            System.out.println(huffmanCodes.get(b));
+            
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
         
-        HuffmanNode arvore = huffmanTree.getRoot();
+        ListaEncadeadaSimplesDesordenada<Byte> compressedList = huffmanTree.makeCompressFile(listabytes, huffmanCodes);
+
+        System.out.println(compressedList.getTamanho());
+
+        System.out.println(compressedList);
 
 
-        
-        
-
+        WriteBytesWListaEncadeada writeBytes = new WriteBytesWListaEncadeada("saida.bin", compressedList);
 
 
     }

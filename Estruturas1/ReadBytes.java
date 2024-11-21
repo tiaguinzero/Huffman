@@ -30,8 +30,7 @@ public class ReadBytes {
             for (int i = 0; i < fileSize; i++) {
                 byte b = file.readByte();
                 
-                System.out.println(b);
-
+                System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
                 try {
                     this.bytes.guardeNoFinal(b); 
                 } catch (Exception e) {

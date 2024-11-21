@@ -8,7 +8,7 @@ import Estruturas1.*;
 
 public class HuffmanTree {
     private HuffmanNode root;
-    private HashMap<Byte, Integer> huffmanCodes;
+    private HashMap<Byte, String> huffmanCodes;
     private FilaPrioridade<HuffmanNode> queue;
 
     public HuffmanTree(HashMap<Byte, Integer> frequencyMap) {
@@ -48,8 +48,8 @@ public class HuffmanTree {
 
     private void generateCodes(HuffmanNode node, String code) {
         if (node.isLeaf()) {
-            huffmanCodes.put(node.getValue(), Integer.parseInt(code, 2));
-            System.out.println("Byte: " + node.getValue() + ", Código: " + code + ", Profundidade: ");
+            huffmanCodes.put(node.getValue(), code);
+            // System.out.println("Byte: " + node.getValue() + ", Código: " + code + ", Frequência: " + node.getFrequency());
             return;
         }
         if (node.getLeft() != null) {
@@ -60,44 +60,39 @@ public class HuffmanTree {
         }
     }
 
-    public HashMap<Byte, Integer> getHuffmanCodes() {
+    public HashMap<Byte,String> getHuffmanCodes() {
         return huffmanCodes;
     }
 
-    public void makeNewFile(String filePath, Map<Byte, Integer> huffmanCodes, ListaEncadeadaSimplesDesordenada<Byte> bytes, HuffmanNode root) {
-        try (FileOutputStream file = new FileOutputStream(filePath)) {
-            serializeTree(file, root);
-            System.out.println("Árvore serializada com sucesso.");
+    
+    public ListaEncadeadaSimplesDesordenada<Byte> makeCompressFile(ListaEncadeadaSimplesDesordenada<Byte> bytes, HashMap<Byte,String> huffmanCodes){
+        ListaEncadeadaSimplesDesordenada<Byte> newList = new ListaEncadeadaSimplesDesordenada<>(); //cria uma nova lista de bytes
+        int byteTemp = 0;
+        int bitCount = 0;
 
-            BitSet bitSet = new BitSet();
-            int bitIndex = 0;
 
-            for (int i = 0; i < bytes.getTamanho(); i++) {
-                try {
-                    byte b = bytes.get(i);
-                    int code = huffmanCodes.get(b);
-                    int codeLength = Integer.SIZE - Integer.numberOfLeadingZeros(code);
-
-                    for (int j = codeLength - 1; j >= 0; j--) {
-                        boolean bit = ((code >> j) & 1) == 1;
-                        bitSet.set(bitIndex++, bit);
-                    }
+        for(int i = 0; i<bytes.getTamanho(); i++){
+            System.out.printf("%.2f%%\n", (i * 100.0) / bytes.getTamanho());
+            try {
+                Byte b = bytes.get(i);
+                String code = huffmanCodes.get(b);
+                for(int j = 0; j<code.length(); j++){
+                    byteTemp = (byteTemp << 1) | code.charAt(j) - '0';
+                    bitCount++;
                     
-                } catch (Exception e) {
+                    if (bitCount == 8) {
+                        newList.guardeNoFinal((byte) byteTemp);
+                        byteTemp = 0;
+                        bitCount = 0;
+                    }
                 }
-                
+        
+            } catch (Exception e) {
+                System.err.println("Erro ao buscar byte: " + e.getMessage());
             }
 
-            byte[] compressedBytes = bitSet.toByteArray();
-            file.write(compressedBytes);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-    }
-
-    public void comprimeArvore(){
-
-        
+        return newList;
 
     }
 }
