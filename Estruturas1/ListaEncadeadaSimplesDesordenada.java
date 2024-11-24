@@ -106,7 +106,11 @@ public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 	{
 		if (i==null) throw new Exception ("Informação ausente");
 
-        if (this.primeiro==null) this.primeiro = new No (i);
+        if (this.primeiro==null){
+			this.primeiro = new No (i);
+			return;
+		}
+		
         
         No currentNo=this.primeiro;
         

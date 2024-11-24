@@ -13,28 +13,13 @@ public class Main {
         readBytes.readBytes();
 
         ListaEncadeadaSimplesDesordenada<Byte> listabytes = readBytes.getBytes();
+        HashMap<Byte, Integer> frequencyMap = readBytes.getFrequencyMap();
 
-        HashMap<Byte, Integer> frequencyMap = new HashMap<>();
 
 
-        //faz o hashmap de frequencia
-        for(int i = 0; i<listabytes.getTamanho(); i++){
-            try{
-                byte b = listabytes.get(i);
-                if(frequencyMap.containsKey(b)){
-                    frequencyMap.put(b, frequencyMap.get(b) + 1);
-                } else {
-                    frequencyMap.put(b, 1);
-                }
-            }
-            catch(Exception e){
-                System.err.println("Erro ao buscar byte: " + e.getMessage());
-            }
-            
-        }
 
         System.out.println(frequencyMap);
-        System.out.println(frequencyMap.size());
+        System.out.println(listabytes.getTamanho());
 
 
         
@@ -54,15 +39,9 @@ public class Main {
             // TODO: handle exception
         }
         
-        ListaEncadeadaSimplesDesordenada<Byte> compressedList = huffmanTree.makeCompressFile(listabytes, huffmanCodes);
+        ListaEncadeadaSimplesDesordenada<Byte> compressedList = huffmanTree.makeCompressFile(listabytes, huffmanCodes, "saida.txt");
 
         System.out.println(compressedList.getTamanho());
-
-        System.out.println(compressedList);
-
-
-        WriteBytesWListaEncadeada writeBytes = new WriteBytesWListaEncadeada("saida.bin", compressedList);
-
 
     }
 
