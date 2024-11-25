@@ -39,9 +39,8 @@ public class Main {
             // TODO: handle exception
         }
         
-        ListaEncadeadaSimplesDesordenada<Byte> compressedList = huffmanTree.makeCompressFile(listabytes, huffmanCodes, "saida.txt");
+        huffmanTree.makeCompressFile(listabytes, huffmanCodes, "saida.txt");
 
-        System.out.println(compressedList.getTamanho());
 
     }
 

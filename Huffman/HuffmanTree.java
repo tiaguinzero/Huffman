@@ -64,55 +64,61 @@ public class HuffmanTree {
         return huffmanCodes;
     }
 
-    public ListaEncadeadaSimplesDesordenada<Byte> makeCompressFile(
-    ListaEncadeadaSimplesDesordenada<Byte> bytes,
-    HashMap<Byte, String> huffmanCodes,
-    String namefile) 
-    {
-    
-        ListaEncadeadaSimplesDesordenada<Byte> newList = new ListaEncadeadaSimplesDesordenada<>(); // Cria uma nova lista de bytes
-        int bitCounter = 0;
-        Fila<Integer> fila = new Fila<>();
-    
-        try (FileOutputStream fos = new FileOutputStream(namefile)) { // Abre o arquivo uma única vez
+    public void makeCompressFile(ListaEncadeadaSimplesDesordenada<Byte> bytes, HashMap<Byte, String> huffmanCodes, String namefile) {
+        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(namefile))) {
+            Fila<Integer> fila = new Fila<>();
+
             for (int i = 0; i < bytes.getTamanho(); i++) {
-                System.out.printf("%.2f%%\n", (i * 100.0) / bytes.getTamanho());
-            
                 try{
-                    Byte b = bytes.get(i);
-                    String code = huffmanCodes.get(b);
-                    if(fila.getTamanho() < 8){
-                        for (int j = 0; j < code.length(); j++) {
-                            if (code.charAt(j) == '1') {
-                                fila.guardeUmItem(1);
-                            } else {
-                                fila.guardeUmItem(0);
-                            }
+                Byte b = bytes.get(i);
+                String code = huffmanCodes.get(b);
+                    for (int j = 0; j < code.length(); j++) {
+                        if (code.charAt(j) == '1') {
+                            fila.guardeUmItem(1);
+                        } else {
+                            fila.guardeUmItem(0);
                         }
                     }
-
-                    if(fila.getTamanho()>=8){
+                while(fila.getTamanho()>=8){
                         byte newByte = 0;
                         StringBuilder sb = new StringBuilder();
                         for(int j = 0; j < 8; j++){
                             sb.append(fila.desenfilere());
                         }
                         newByte = (byte) Integer.parseInt(sb.toString(), 2);
-                        fos.write(newByte);
+                        dos.write(newByte);
                     }
-
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     e.printStackTrace();
-                } 
+                }
+
             }
+            int paddingBits = 8 - fila.getTamanho();
+            if (paddingBits < 8) {
+                for (int j = 0; j < paddingBits; j++) {
+                    try {
+                        fila.guardeUmItem(0);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                byte newByte = 0;
+                StringBuilder sb = new StringBuilder();
+                for(int j = 0; j < 8; j++){
+                        sb.append(fila.desenfilere());
+                    }
+                    newByte = (byte) Integer.parseInt(sb.toString(), 2);
+                    dos.write(newByte);
+                dos.writeByte(paddingBits); // Grava o padding
+            } else {
+               dos.writeByte(0);
+            }
+
+
         } catch (IOException e) {
-            System.err.println("Erro ao escrever bytes no arquivo: " + e.getMessage());
+            System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
+            e.printStackTrace();
         }
-    
-        return newList; // Retorna a nova lista
     }
-
-
 
 }
