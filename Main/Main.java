@@ -8,39 +8,41 @@ import Huffman.*;
 public class Main {
     public static void main(String[] args) {
 
-        ReadBytes readBytes = new ReadBytes("entrada.txt");
+        // ReadBytes readBytes = new ReadBytes("entrada.txt");
 
-        readBytes.readBytes();
+        // readBytes.readBytes();
 
-        ListaEncadeadaSimplesDesordenada<Byte> listabytes = readBytes.getBytes();
-        HashMap<Byte, Integer> frequencyMap = readBytes.getFrequencyMap();
-
-
+        // ListaEncadeadaSimplesDesordenada<Byte> listabytes = readBytes.getBytes();
+        // HashMap<Byte, Integer> frequencyMap = readBytes.getFrequencyMap();
 
 
-        System.out.println(frequencyMap);
-        System.out.println(listabytes.getTamanho());
+
+
+        // System.out.println(frequencyMap);
+        // System.out.println(listabytes.getTamanho());
 
 
         
 
-        HuffmanTree huffmanTree = new HuffmanTree(frequencyMap);
+        // HuffmanTree huffmanTree = new HuffmanTree(frequencyMap);
 
 
-        huffmanTree.generateCodes();
-        HashMap<Byte, String> huffmanCodes = huffmanTree.getHuffmanCodes();
-        System.out.println(huffmanCodes);
+        // huffmanTree.generateCodes();
+        // HashMap<Byte, String> huffmanCodes = huffmanTree.getHuffmanCodes();
+        // System.out.println(huffmanCodes);
 
-        try {
-            Byte b = listabytes.get(0);
-            System.out.println(huffmanCodes.get(b));
+        // try {
+        //     Byte b = listabytes.get(0);
+        //     System.out.println(huffmanCodes.get(b));
             
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
+        // } catch (Exception e) {
+        //     // TODO: handle exception
+        // }
         
-        huffmanTree.makeCompressFile(listabytes, huffmanCodes, "saida.txt");
+        // huffmanTree.makeCompressFile(listabytes, huffmanCodes, "saida.txt");
 
+        HuffmanDescompressor descompressor = new HuffmanDescompressor("saida.txt", "descompressao.txt");
+        descompressor.descomprimir();
 
     }
 

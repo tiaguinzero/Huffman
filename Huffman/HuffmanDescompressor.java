@@ -1,5 +1,6 @@
 package Huffman;
 
+import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,51 +17,57 @@ public class HuffmanDescompressor {
         this.outputFilePath = outputFilePath;
     }
 
-    public void decompress() {
-        try (FileInputStream input = new FileInputStream(compressedFilePath);
-             FileOutputStream output = new FileOutputStream(outputFilePath)) {
 
-            // Reconstrói a árvore de Huffman a partir do arquivo
-            HuffmanNode root = deserializeTree(input);
-
-            // Lê os dados comprimidos e traduz os bits em bytes usando a árvore
-            HuffmanNode currentNode = root;
-            int currentByte;
-
-            while ((currentByte = input.read()) != -1) {
-                for (int bitIndex = 7; bitIndex >= 0; bitIndex--) {
-                    int bit = (currentByte >> bitIndex) & 1;
-                    currentNode = (bit == 0) ? currentNode.getLeft() : currentNode.getRight();
-
-                    // Quando alcança uma folha, escreve o byte correspondente
-                    if (currentNode.isLeaf()) {
-                        output.write(currentNode.getValue());
-                        currentNode = root; // Retorna para a raiz para continuar a decodificação
-                    }
-                }
-            }
-
-            System.out.println("Descompressão concluída com sucesso!");
-
-        } catch (IOException e) {
-            e.printStackTrace();
+    public HuffmanNode deserializeTree(DataInputStream dis) throws IOException {
+        boolean isLeaf = dis.readBoolean();
+        if (isLeaf) {
+            byte value = dis.readByte();
+            System.out.println(value);
+            return new HuffmanNode(value, 0); // Frequência não é necessária na descompressão
+        } else {
+            HuffmanNode left = deserializeTree(dis);
+            HuffmanNode right = deserializeTree(dis);
+            return new HuffmanNode(0, left, right); // Frequência não é necessária na descompressão
         }
     }
 
-    private HuffmanNode deserializeTree(FileInputStream input) throws IOException {
-        int isValidNode = input.read();
-        if (isValidNode == -1 || isValidNode == 0) {
-            return null; // Nó inválido ou final do arquivo
+    public void descomprimir() {
+        try (DataInputStream dis = new DataInputStream(new FileInputStream(this.compressedFilePath));
+             FileOutputStream fos = new FileOutputStream(this.outputFilePath)) {
+    
+           HuffmanTree arvore = new HuffmanTree(); //Cria uma árvore vazia
+           arvore.setRoot(deserializeTree(dis)); // Lê e desserializa a árvore
+
+           System.out.println(arvore.toString());
+
+           arvore.generateCodes(); // Gera os códigos de Huffman
+
+           HashMap<Byte,String> codes = arvore.getHuffmanCodes(); // Obtém os códigos de Huffman
+            
+           int paddingBits = dis.readUnsignedByte();    // Lê os bits de preenchimento
+
+           HuffmanNode current = arvore.getRoot();
+        while (dis.available() > 0) {
+            byte b = dis.readByte();
+            for (int i = 7; i >= 0; i--) { // Lê cada bit do byte, do mais significativo para o menos
+                int bit = (b >> i) & 1;
+
+                if (bit == 0) {
+                    current = current.getLeft();
+                } else {
+                    current = current.getRight();
+                }
+
+                if (current.isLeaf()) {
+                    fos.write(current.getValue());
+                    current = arvore.getRoot(); // Volta para a raiz para o próximo caractere
+                }
+            }
         }
 
-        int isLeaf = input.read();
-        if (isLeaf == 1) {
-            return new HuffmanNode((byte) input.read(), 0); // Cria nó folha com valor
+    
+        } catch (IOException e) {
+                // ...
         }
-
-        // Caso contrário, reconstrói nós internos recursivamente
-        HuffmanNode left = deserializeTree(input);
-        HuffmanNode right = deserializeTree(input);
-        return new HuffmanNode(0, left, right); // Nó interno não precisa de valor
     }
 }

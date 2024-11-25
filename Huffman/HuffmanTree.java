@@ -4,6 +4,9 @@ import java.io.*;
 import java.util.BitSet;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.w3c.dom.Node;
+
 import Estruturas1.*;
 
 public class HuffmanTree {
@@ -25,8 +28,19 @@ public class HuffmanTree {
         huffmanCompressor();
     }
 
+    public HuffmanTree(){
+        this.queue = new FilaPrioridade<>();
+        this.huffmanCodes = new HashMap<>();
+        this.root = null;
+    }
+
+
     public HuffmanNode getRoot() {
         return this.root;
+    }
+
+    public void setRoot(HuffmanNode root) {
+        this.root = root;
     }
 
     private void huffmanCompressor() {
@@ -67,6 +81,7 @@ public class HuffmanTree {
     public void makeCompressFile(ListaEncadeadaSimplesDesordenada<Byte> bytes, HashMap<Byte, String> huffmanCodes, String namefile) {
         try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(namefile))) {
             Fila<Integer> fila = new Fila<>();
+            serializeTree(dos);
 
             for (int i = 0; i < bytes.getTamanho(); i++) {
                 try{
@@ -115,10 +130,52 @@ public class HuffmanTree {
             }
 
 
+
         } catch (IOException e) {
             System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
             e.printStackTrace();
         }
     }
+
+    public void serializeTree(DataOutputStream dos) throws IOException {
+        serializeTreeRecursive(this.root, dos);
+    }
+    
+    private void serializeTreeRecursive(HuffmanNode node, DataOutputStream dos) throws IOException {
+        if (node.isLeaf()) {
+            dos.writeBoolean(true); // Marcador para nó folha
+            dos.writeByte(node.getValue());
+        } else {
+            dos.writeBoolean(false); // Marcador para nó interno
+            serializeTreeRecursive(node.getLeft(), dos);
+            serializeTreeRecursive(node.getRight(), dos);
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        // Verifica se a raiz está nula
+        if (root == null) {
+            return "";
+        }
+        // Usa um StringBuilder para construir a string de forma eficiente
+        StringBuilder sb = new StringBuilder();
+        preOrderToString(root, sb);
+        return sb.toString();
+    }
+
+// Método auxiliar para realizar a pré-ordem recursiva
+private void preOrderToString(HuffmanNode node, StringBuilder sb) {
+    if (node == null) {
+        return;
+    }
+    // Adiciona o valor do nó atual ao StringBuilder
+    sb.append(node.getValue()).append(" ");
+    // Chama recursivamente para o lado esquerdo e direito
+    preOrderToString(node.getLeft(), sb);
+    preOrderToString(node.getRight(), sb);
+}
+    
 
 }
