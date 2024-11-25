@@ -1,15 +1,17 @@
-package Estruturas;
+package Estruturas1;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import Estruturas.HashMap;
+import java.util.HashMap;
 
 public class ReadBytes {
     private String filePath;
     private ListaEncadeadaSimplesDesordenada<Byte> bytes;
+    private HashMap<Byte, Integer> frequencyMap;
 
     public ReadBytes() {
         this.bytes = new ListaEncadeadaSimplesDesordenada<>();
+        this.frequencyMap = new HashMap<>();
     }
 
     public ReadBytes(String filePath) {
@@ -30,8 +32,9 @@ public class ReadBytes {
             long fileSize = file.length();
             for (int i = 0; i < fileSize; i++) {
                 byte b = file.readByte();
+                frequencyMap.put(b, frequencyMap.getOrDefault(b, 0) + 1);
                 
-                System.out.println(b);
+                System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
                 try {
                     this.bytes.guardeNoFinal(b); 
                 } catch (Exception e) {
@@ -41,5 +44,9 @@ public class ReadBytes {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public HashMap<Byte, Integer> getFrequencyMap() {
+        return this.frequencyMap;
     }
 }

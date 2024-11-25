@@ -1,4 +1,5 @@
-package Estruturas;
+package Estruturas1;
+
 
 // esta classe estava, supostamente, pronta
 

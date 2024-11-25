@@ -20,10 +20,15 @@ public class HuffmanNode implements Comparable<HuffmanNode> {
         this.right = right;
     }
 
-    public byte getValue() { return this.value; }
-    public int getFrequency() { return this.frequency; }
-    public HuffmanNode getLeft() { return this.left; }
-    public HuffmanNode getRight() { return this.right; }
+    public byte getValue() { return value; }
+    public int getFrequency() { return frequency; }
+    public HuffmanNode getLeft() { return left; }
+    public HuffmanNode getRight() { return right; }
+
+    public void setLeft(HuffmanNode left) { this.left = left; }
+    public void setRight(HuffmanNode right) { this.right = right; }
+    public void setByte(byte value) { this.value = value; }
+    public void setFrequency(int frequency) { this.frequency = frequency; }
 
     public boolean isLeaf() {
         return this.left == null && this.right == null;
@@ -36,6 +41,6 @@ public class HuffmanNode implements Comparable<HuffmanNode> {
 
     @Override
     public String toString() {
-        return "Char: " + (this.value == 0 ? "INTERNAL" : this.value) + ", Freq: " + this.frequency;
+        return "Char: " + this.value + ", Freq: " + this.frequency;
     }
 }

@@ -1,6 +1,4 @@
-package Estruturas;
-
-import java.util.List;
+package Estruturas1;
 
 public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 {
@@ -108,7 +106,11 @@ public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 	{
 		if (i==null) throw new Exception ("Informação ausente");
 
-        if (this.primeiro==null) this.primeiro = new No (i);
+        if (this.primeiro==null){
+			this.primeiro = new No (i);
+			return;
+		}
+		
         
         No currentNo=this.primeiro;
         
@@ -182,11 +184,13 @@ public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 		if (posicao<0) throw new Exception ("Posicao invalida");
 		if (i==null) throw new Exception ("Falta o que inserir");
 		
-		X inf = new Clonador<X>().clone(i);
+		// X inf = new Clonador<X>().clone(i);
 		
 		if (posicao==0)
 		{
-			this.primeiro = new No (inf,this.primeiro);
+			this.primeiro = new No (i,this.primeiro);
+
+
 			return;
 		}
 		
@@ -199,7 +203,8 @@ public class ListaEncadeadaSimplesDesordenada <X> implements Cloneable
 			posAtual++;
 		}
 		
-		atual.setProx (new No (inf,atual.getProx()));
+		atual.setProx (new No (i,atual.getProx()));
+
 	}
 	
 
