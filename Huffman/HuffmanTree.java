@@ -1,11 +1,8 @@
 package Huffman;
 
 import java.io.*;
-import java.util.BitSet;
-import java.util.HashMap;
-import java.util.Map;
 
-import org.w3c.dom.Node;
+import java.util.HashMap;
 
 import Estruturas1.*;
 
@@ -78,36 +75,36 @@ public class HuffmanTree {
         return huffmanCodes;
     }
 
-    public void makeCompressFile(ListaEncadeadaSimplesDesordenada<Byte> bytes, HashMap<Byte, String> huffmanCodes, String namefile) {
+    public void makeCompressFile(Pilha<Byte> bytes, HashMap<Byte, String> huffmanCodes, String namefile) {
         try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(namefile))) {
             Fila<Integer> fila = new Fila<>();
             serializeTree(dos);
 
-            for (int i = 0; i < bytes.getTamanho(); i++) {
+            do{
                 try{
-                Byte b = bytes.get(i);
-                String code = huffmanCodes.get(b);
-                    for (int j = 0; j < code.length(); j++) {
-                        if (code.charAt(j) == '1') {
-                            fila.guardeUmItem(1);
-                        } else {
-                            fila.guardeUmItem(0);
+                    Byte b = bytes.recupereUmItem();
+                    String code = huffmanCodes.get(b);
+                        for (int j = 0; j < code.length(); j++) {
+                            if (code.charAt(j) == '1') {
+                                fila.guardeUmItem(1);
+                            } else {
+                                fila.guardeUmItem(0);
+                            }
                         }
-                    }
-                while(fila.getTamanho()>=8){
-                        byte newByte = 0;
-                        StringBuilder sb = new StringBuilder();
-                        for(int j = 0; j < 8; j++){
-                            sb.append(fila.desenfilere());
-                        }
-                        newByte = (byte) Integer.parseInt(sb.toString(), 2);
-                        dos.write(newByte);
+                    while(fila.getTamanho()>=8){
+                            byte newByte = 0;
+                            StringBuilder sb = new StringBuilder();
+                            for(int j = 0; j < 8; j++){
+                                sb.append(fila.desenfilere());
+                            }
+                            newByte = (byte) Integer.parseInt(sb.toString(), 2);
+                            dos.write(newByte);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-            }
+            }while(!bytes.isVazia());
             int paddingBits = 8 - fila.getTamanho();
             if (paddingBits < 8) {
                 for (int j = 0; j < paddingBits; j++) {
@@ -124,7 +121,7 @@ public class HuffmanTree {
                     }
                     newByte = (byte) Integer.parseInt(sb.toString(), 2);
                     dos.write(newByte);
-                dos.writeByte(paddingBits); // Grava o padding
+                dos.writeByte(paddingBits); 
             } else {
                dos.writeByte(0);
             }
@@ -165,14 +162,11 @@ public class HuffmanTree {
         return sb.toString();
     }
 
-// Método auxiliar para realizar a pré-ordem recursiva
 private void preOrderToString(HuffmanNode node, StringBuilder sb) {
     if (node == null) {
         return;
     }
-    // Adiciona o valor do nó atual ao StringBuilder
     sb.append(node.getValue()).append(" ");
-    // Chama recursivamente para o lado esquerdo e direito
     preOrderToString(node.getLeft(), sb);
     preOrderToString(node.getRight(), sb);
 }

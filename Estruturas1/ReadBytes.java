@@ -6,11 +6,11 @@ import java.util.HashMap;
 
 public class ReadBytes {
     private String filePath;
-    private ListaEncadeadaSimplesDesordenada<Byte> bytes;
+    private Pilha<Byte> bytes;
     private HashMap<Byte, Integer> frequencyMap;
 
     public ReadBytes() {
-        this.bytes = new ListaEncadeadaSimplesDesordenada<>();
+        this.bytes = new Pilha<>();
         this.frequencyMap = new HashMap<>();
     }
 
@@ -23,7 +23,7 @@ public class ReadBytes {
         this.filePath = filePath;
     }
 
-    public ListaEncadeadaSimplesDesordenada<Byte> getBytes() {
+    public Pilha<Byte> getBytes() {
         return this.bytes;
     }
 
@@ -33,14 +33,21 @@ public class ReadBytes {
             for (int i = 0; i < fileSize; i++) {
                 byte b = file.readByte();
                 frequencyMap.put(b, frequencyMap.getOrDefault(b, 0) + 1);
-                
+                System.out.printf("Primeiro porcentagem");
                 System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
                 try {
-                    this.bytes.guardeNoFinal(b); 
+                    this.bytes.guardeUmItem(b); 
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+            
+            try {
+                this.bytes.inverta();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,6 @@
 package Estruturas1;
 
+
 public class Fila <X>{
 
     private ListaEncadeadaSimplesDesordenada l;
@@ -99,6 +100,15 @@ public class Fila <X>{
         return l.getTamanho();
     }
 
-    
+    public void inverta() throws Exception {
+        Pilha<X> pilha = new Pilha<>();
+        while (!this.isVazia()) {
+            pilha.guardeUmItem(this.desenfilere());
+        }
+        while (!pilha.isVazia()) {
+            this.guardeUmItem(pilha.recupereUmItem());
+        }
+    }    
+
 
 }

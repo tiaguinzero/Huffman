@@ -1,186 +1,312 @@
-// package Estruturas1;
+package Estruturas1;
 
 
-// package Estruturas;
+public class HashMap<K, V> {
+    private class Elemento {
+        private K chave;
+        private V valor;
 
-// public class HashMap<K, V> {
-//     private static final int DEFAULT_CAPACITY = 16; // Tamanho inicial
-//     private static final double LOAD_FACTOR = 0.75; // Fator de carga para resize
-//     private ListaEncadeadaSimplesDesordenada<ListaEncadeadaSimplesDesordenada<Pair<K, V>>> table;
-//     private int capacity;
-//     private int size;
+        Elemento(K chave, V valor) {
+            this.chave = chave;
+            this.valor = valor;
+        }
 
-//     class Pair<K, V> {
-//         K key;
-//         V value;
+        public K getChave() {
+            return chave;
+        }
 
-//         Pair(K key, V value) {
-//             this.key = key;
-//             this.value = value;
-//         }
+        public V getValor() {
+            return valor;
+        }
 
-//         @Override
-//         public boolean equals(Object obj) {
-//             if (this == obj) return true;
-//             if (obj == null || getClass() != obj.getClass()) return false;
-//             Pair<?, ?> pair = (Pair<?, ?>) obj;
-//             return key.equals(pair.key);
-//         }
+        public void setValor(V valor) {
+            this.valor = valor;
+        }
 
-//         @Override
-//         public int hashCode() {
-//             return key.hashCode();
-//         }
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null)
+                return false;
+            if (getClass() != obj.getClass())
+                return false;
+            Elemento other = (Elemento) obj;
 
-//         @Override
-//         public String toString() {
-//             return key + "=" + value;
-//         }
-//     }
+            if (other.chave != this.chave || other.valor != this.valor)
+                return false;
 
-//     public HashMap() {
-//         this(DEFAULT_CAPACITY);
-//     }
+            return true;
+        }
 
-//     public HashMap(int capacity) {
-//         this.capacity = capacity;
-//         this.size = 0;
-//         this.table = new ListaEncadeadaSimplesDesordenada<>();
-//         try {
-//             for (int i = 0; i < capacity; i++) {
-//                 table.guardeNoInicio(new ListaEncadeadaSimplesDesordenada<>());
-//             }
-//         } catch (Exception e) {
-//             System.err.println("Erro ao inicializar tabela: " + e.getMessage());
-//         }
-//     }
+        @Override
+        public int hashCode() {
+            int ret = 777;
 
-//     private int hash(K key) {
-//         return Math.abs(key.hashCode()) % capacity;
-//     }
+            ret += 13 * ret + chave.hashCode();
+            ret += 13 * ret + valor.hashCode();
 
-//     private ListaEncadeadaSimplesDesordenada<Pair<K, V>> getBucket(int index) throws Exception {
-//         return table.get(index);
-//     }
+            return ret < 0 ? -ret : ret;
+        }
 
-//     public void put(K key, V value) {
-//         if (key == null) throw new IllegalArgumentException("Chave não pode ser nula.");
-//         if (contemValor(value)) throw new IllegalArgumentException("Valor já existe no HashMap.");
+        @Override
+        public String toString() {
+            return "(" + chave + ", " + valor + ")";
+        }
+    }
 
-//         if ((double) size / capacity > LOAD_FACTOR) {
-//             resize();
-//         }
+    private ListaEncadeadaSimplesDesordenada<Elemento>[] vetor;
+    private int qtdElems = 0;
+    private int capacidadeInicial;
+    private float txMinDesperdicio, txMaxDesperdicio;
 
-//         int index = hash(key);
-//         try {
-//             ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(index);
+    // Construtor principal
+    public HashMap(int capacidadeInicial, float txMinDesperdicio, float txMaxDesperdicio) {
+        this.capacidadeInicial = capacidadeInicial;
+        this.txMinDesperdicio = txMinDesperdicio;
+        this.txMaxDesperdicio = txMaxDesperdicio;
+        this.vetor = new ListaEncadeadaSimplesDesordenada[capacidadeInicial];
+    }
 
-//             // Correctly checks for existing key and updates value or adds new pair
-//             boolean keyExists = false;
-//             for (int i = 0; i < bucket.getTamanho(); i++) {
-//                 Pair<K, V> pair = bucket.get(i);
-//                 if (pair.key.equals(key)) {
-//                     pair.value = value;
-//                     keyExists = true;
-//                     break;
-//                 }
-//             }
-//             if (!keyExists) {
-//                 bucket.guardeNoInicio(new Pair<>(key, value));
-//                 size++;
-//             }
-//         } catch (Exception e) {
-//             System.err.println("Erro ao adicionar elemento: " + e.getMessage());
-//         }
-//     }
+    // Construtor alternativo com taxas padrão
+    public HashMap(int capacidadeInicial) {
+        this(capacidadeInicial, 0.7f, 0.9f); // Valores padrão de 70% e 90%
+    }
 
-//     public V get(K key) {
-//         // ... (get method remains unchanged) ...
-//     }
+    private int calcularIndice(K chave) {
+        int ret = chave.hashCode();
+        if (ret < 0) {
+            ret = -ret;
+        }
+        return ret % capacidadeInicial;
+    }
 
-//     private void resize() {
-//         int newCapacity = capacity * 2;
-//         ListaEncadeadaSimplesDesordenada<ListaEncadeadaSimplesDesordenada<Pair<K, V>>> newTable =
-//                 new ListaEncadeadaSimplesDesordenada<>();
-//         for (int i = 0; i < newCapacity; i++) {
-//             newTable.guardeNoInicio(new ListaEncadeadaSimplesDesordenada<>());
-//         }
+    private void verificarTaxaEDimensionar() {
+        float taxaOcupacao = (float) qtdElems / capacidadeInicial;
 
-//         try {
-//             for (int i = 0; i < capacity; i++) {
-//                 ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(i);
-//                 for (Pair<K, V> pair : bucket) { //Iterate using enhanced for loop for cleaner code
-//                     int newIndex = Math.abs(pair.key.hashCode()) % newCapacity;
-//                     newTable.get(newIndex).guardeNoInicio(pair); //Directly add to new bucket - no need to check for duplicates here.  Resize handles it.
-//                 }
-//             }
-//             this.table = newTable;
-//             this.capacity = newCapacity;
-//         } catch (Exception e) {
-//             System.err.println("Erro ao redimensionar tabela: " + e.getMessage());
-//         }
-//     }
+        if (taxaOcupacao > txMaxDesperdicio) {
+            redimensionar(capacidadeInicial * 2); // Aumenta o tamanho
+        } else if (taxaOcupacao < txMinDesperdicio && capacidadeInicial > 1) {
+            int novaCapacidade = capacidadeInicial / 2;
+            if (novaCapacidade < 1) {
+                novaCapacidade = 1;
+            }
+            redimensionar(novaCapacidade); // Diminui o tamanho, mas não abaixo de 1
+                                           // capacidadeInicial
+        }
+    }
 
-//     public V get(K key) {
-//         int index = hash(key);
-//         try {
-//             ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(index);
+    private void redimensionar(int novaCapacidade) {
+        ListaEncadeadaSimplesDesordenada<Elemento>[] novaTabela = new ListaEncadeadaSimplesDesordenada[novaCapacidade];
+        for (ListaEncadeadaSimplesDesordenada<Elemento> lista : vetor) {
+            if (lista != null) {
+                for (int i = 0; i < lista.getTamanho(); i++) {
+                    try {
+                        Elemento elemento = lista.get(i);
+                        int hash = elemento.getChave().hashCode();
+                        int novoIndice = hash < 0 ? -hash : hash % novaCapacidade;
+                        if (novaTabela[novoIndice] == null) {
+                            novaTabela[novoIndice] = new ListaEncadeadaSimplesDesordenada<>();
+                        }
+                        novaTabela[novoIndice].guardeNoFinal(elemento);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        vetor = novaTabela;
+        capacidadeInicial = novaCapacidade;
+    }
 
-//             for (int i = 0; i < bucket.getTamanho(); i++) {
-//                 Pair<K, V> pair = bucket.get(i);
-//                 if (pair.key.equals(key)) {
-//                     return pair.value;
-//                 }
-//             }
-//         } catch (Exception e) {
-//             System.err.println("Erro ao buscar chave: " + e.getMessage());
-//         }
-//         return null;
-//     }
+    public void guardeUmItem(K chave, V valor) throws Exception {
+        if (chave == null) {
+            throw new Exception("Chave não pode ser nula");
+        }
+
+        int indice = calcularIndice(chave);
+
+        if (vetor[indice] == null) {
+            vetor[indice] = new ListaEncadeadaSimplesDesordenada<>();
+        }
+
+        ListaEncadeadaSimplesDesordenada<Elemento> lista = vetor[indice];
+        Elemento novoElemento = new Elemento(chave, valor);
+
+        for (int i = 0; i < lista.getTamanho(); i++) {
+            Elemento atual = lista.get(i);
+            if (atual.getChave().equals(chave)) {
+                throw new Exception("Chave repetida! Não é possível adicionar um item com chave já existente.");
+            }
+        }
+
+        lista.guardeNoFinal(novoElemento);
+        qtdElems++;
+        verificarTaxaEDimensionar();
+    }
+
+    public V recupereUmItem(K chave) throws Exception {
+        if (chave == null) {
+            throw new Exception("Chave não pode ser nula");
+        }
+
+        int indice = calcularIndice(chave);
+        ListaEncadeadaSimplesDesordenada<Elemento> lista = vetor[indice];
+
+        if (lista != null) {
+            for (int i = 0; i < lista.getTamanho(); i++) {
+                Elemento atual = lista.get(i);
+                if (atual.getChave().equals(chave)) {
+                    return atual.getValor();
+                }
+            }
+        }
+
+        throw new Exception("Item não encontrado");
+    }
+
+    public void removaUmItem(K chave) throws Exception {
+        int indice = calcularIndice(chave);
+        ListaEncadeadaSimplesDesordenada<Elemento> lista = vetor[indice];
+
+        if (lista != null) {
+            for (int i = 0; i < lista.getTamanho(); i++) {
+                Elemento atual = lista.get(i);
+                if (atual.getChave().equals(chave)) {
+                    lista.remova(i);
+                    qtdElems--;
+                    verificarTaxaEDimensionar(); // Verifica e redimensiona se necessário
+                    return;
+                }
+            }
+        }
+
+        throw new Exception("Item não encontrado");
+    }
     
-
-//     public boolean contemKey(K key) {
-//         return get(key) != null;
-//     }
-
-//     private boolean contemValor(V value) {
-//         try {
-//             for (int i = 0; i < table.getTamanho(); i++) {
-//                 ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(i);
-//                 for (int j = 0; j < bucket.getTamanho(); j++) {
-//                     if (bucket.get(j).value.equals(value)) {
-//                         return true;
-//                     }
-//                 }
-//             }
-//         } catch (Exception e) {
-//             System.err.println("Erro ao verificar valor: " + e.getMessage());
-//         }
-//         return false;
-//     }
-
-//     public int size() {
-//         return size;
-//     }
     
-//     @Override
-//     public String toString() {
-//         StringBuilder sb = new StringBuilder();
-//         sb.append("{");
-//         try {
-//             for (int i = 0; i < table.getTamanho(); i++) {
-//                 ListaEncadeadaSimplesDesordenada<Pair<K, V>> bucket = getBucket(i);
-//                 for (int j = 0; j < bucket.getTamanho(); j++) {
-//                     sb.append(bucket.get(j)).append(", ");
-//                 }
-//             }
-//         } catch (Exception e) {
-//             System.err.println("Erro ao construir string: " + e.getMessage());
-//         }
-//         if (sb.length() > 1) {
-//             sb.setLength(sb.length() - 2); // Remove última vírgula e espaço
-//         }
-//         sb.append("}");
-//         return sb.toString();
-//     }
-// }
+    public void altereUmItem(K chave, V novoValor) throws Exception {
+        int indice = calcularIndice(chave);
+        ListaEncadeadaSimplesDesordenada<Elemento> lista = vetor[indice];
+
+        if (lista != null) {
+            for (int i = 0; i < lista.getTamanho(); i++) {
+                Elemento atual = lista.get(i);
+                if (atual.getChave().equals(chave)) {
+                    atual.setValor(novoValor);
+                    return;
+                }
+            }
+        }
+
+        throw new Exception("Item não encontrado");
+    }
+
+    public K recupereUmaChave(int index) throws Exception {
+        if (index < 0 || index >= qtdElems) {
+            throw new Exception("Índice fora dos limites");
+        }
+
+        int currentIndex = 0;
+        for (ListaEncadeadaSimplesDesordenada<Elemento> lista : vetor) {
+            if (lista != null) {
+                for (int i = 0; i < lista.getTamanho(); i++) {
+                    if (currentIndex == index) {
+                        return lista.get(i).getChave();
+                    }
+                    currentIndex++;
+                }
+            }
+        }
+
+        throw new Exception("Item não encontrado");
+    }
+
+    public int getTamanho() {
+        return qtdElems;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+
+        HashMap<K, V> other = (HashMap<K, V>) obj;
+
+        if (other.qtdElems != this.qtdElems || other.capacidadeInicial != this.capacidadeInicial
+                || other.txMinDesperdicio != this.txMinDesperdicio || other.txMaxDesperdicio != this.txMaxDesperdicio)
+            return false;
+
+            try{
+                for (int i = 0; i < capacidadeInicial; i++) {
+                    ListaEncadeadaSimplesDesordenada<Elemento> lista = vetor[i];
+                    ListaEncadeadaSimplesDesordenada<Elemento> otherLista = other.vetor[i];
+        
+                    if (lista == null && otherLista != null || lista != null && otherLista == null)
+                        return false;
+        
+                    if (lista != null && otherLista != null) {
+                        if (lista.getTamanho() != otherLista.getTamanho())
+                            return false;
+        
+                        for (int j = 0; j < lista.getTamanho(); j++) {
+                            if (!lista.get(j).equals(otherLista.get(j)))
+                                return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int ret = 777;
+
+        ret += 13 * ret + qtdElems;
+        ret += 13 * ret + Integer.valueOf(capacidadeInicial).hashCode();
+        ret += 13 * ret + Float.valueOf(txMinDesperdicio).hashCode();
+        ret += 13 * ret + Float.valueOf(txMaxDesperdicio).hashCode();
+
+        try {
+            for (int i = 0; i < capacidadeInicial; i++) {
+                ListaEncadeadaSimplesDesordenada<Elemento> lista = vetor[i];
+                if (lista != null) {
+                    for (int j = 0; j < lista.getTamanho(); j++) {
+                        ret += 13 * ret + lista.get(j).hashCode();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return ret < 0 ? -ret : ret;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+
+        for (ListaEncadeadaSimplesDesordenada<Elemento> lista : vetor) {
+            if (lista != null) {
+                for (int i = 0; i < lista.getTamanho(); i++) {
+                    try {
+                        Elemento elemento = lista.get(i);
+                        sb.append(elemento.toString()).append(", ");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+
+        sb.append("}");
+        return sb.toString();
+    }
+}
