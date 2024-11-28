@@ -1,0 +1,4525 @@
+for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}for (int i = 0; i < fileSize; i++) {
+    try {
+        // Lê o próximo byte do arquivo
+        byte b = file.readByte();
+
+        // Recupera a frequência atual do byte ou define como 0 caso não exista
+        int frequency = 0;
+        try {
+            frequency = frequencyMap.recupereUmItem(b);
+        } catch (Exception e) {
+            // Se o item não for encontrado, a frequência é zero (item novo)
+        }
+
+        // Atualiza ou insere a frequência no mapa
+        if (frequency == 0) {
+            frequencyMap.guardeUmItem(b, 1); // Byte aparece pela primeira vez
+        } else {
+            frequencyMap.altereUmItem(b, frequency + 1); // Incrementa a frequência
+        }
+
+        // Exibe a porcentagem processada
+        System.out.printf("Primeiro porcentagem");
+        System.out.printf("%.2f%%\n", (i * 100.0) / fileSize);
+
+        // Armazena o byte em outra estrutura
+        this.bytes.guardeUmItem(b);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
